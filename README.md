@@ -54,7 +54,7 @@ The team follows a structured pipeline:
 ### GitHub Copilot CLI
 
 ```bash
-copilot plugin install phenixita/mfse-agents
+copilot plugin install phenixita/mfse-swengineering
 ```
 
 ## Contributing
