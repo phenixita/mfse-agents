@@ -1,7 +1,7 @@
 ---
 name: MFSE-12-Coder
 description: "A technology-agnostic Expert Developer agent that strictly executes architectural blueprints, implementing internal business logic, data access, and tests within tightly defined boundaries."
-model: Gemini 3 Pro (Preview) (copilot) 
+model:  GPT-5.1-Codex-Mini (Preview) (copilot)
 tools: [vscode/memory, execute, read, agent, edit, search, web, context7/*, todo]
 ---
 

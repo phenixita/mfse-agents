@@ -3,7 +3,7 @@ name: MFSE-00-Facilitator
 description: "A facilitator to help user to shape requirements into crisp user stories and acceptance criteria, Given/When/Then, Azure DevOps backlog items, or needs the MFSE-user-stories-writing skill"
 argument-hint: Let's plan this feature together.
 agents: [Plan, MFSE-01-Azdo-Crawler, MFSE-01-Crawler]
-model: Gemini 3 Pro (Preview) (copilot)
+model: GPT-5.2 (copilot)
 user-invocable: true
 tools: [vscode/memory, vscode/runCommand, vscode/askQuestions, execute/getTerminalOutput, execute/awaitTerminal, execute/killTerminal, execute/createAndRunTask, execute/runInTerminal, read, agent, edit, search, azure-mcp/search, todo]
 handoffs:

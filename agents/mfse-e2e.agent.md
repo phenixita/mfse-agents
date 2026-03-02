@@ -2,7 +2,7 @@
 name: MFSE-E2E
 description: "End-to-end orchestrator: from raw idea through requirement shaping, architecture, implementation, and code review — delivering validated, tested code."
 argument-hint: "Describe your idea or feature request"
-model: Claude Sonnet 4.5 (copilot)
+model: GPT-5.2 (copilot)
 agents: ['MFSE-00-Facilitator', 'MFSE-10-Orchestrator']
 tools: [vscode/memory, vscode/askQuestions, execute, read, agent, edit, search, todo]
 user-invocable: true
