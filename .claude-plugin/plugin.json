@@ -1,7 +1,7 @@
 {
   "name": "mfse-swengineering",
   "description": "AI software engineering team — agents that collaborate across requirements, architecture, implementation, and review",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Michele Ferracin",
     "email": "michele@micheleferracin.it"
