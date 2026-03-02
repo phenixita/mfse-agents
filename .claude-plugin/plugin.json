@@ -1,0 +1,13 @@
+{
+  "name": "mfse-swengineering",
+  "description": "AI software engineering team — agents that collaborate across requirements, architecture, implementation, and review",
+  "version": "0.1.0",
+  "author": {
+    "name": "Michele Ferracin",
+    "email": "michele@micheleferracin.it"
+  },
+  "license": "MIT",
+  "keywords": ["agents", "software-engineering", "multi-agent", "copilot", "claude"],
+  "agents": "agents/",
+  "skills": ["skills/"]
+}
