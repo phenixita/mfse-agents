@@ -40,6 +40,71 @@ Reusable prompt modules that agents compose into their workflows.
 | [mfse-user-stories-writing](skills/mfse-user-stories-writing/SKILL.md) | Facilitator | BDD user story writing with Given/When/Then templates |
 | [mfse-azure-devops-cli-boards](skills/mfse-azure-devops-cli-boards/SKILL.md) | Azdo WIT | Azure DevOps Boards CLI commands for work items |
 
+## DORA Metrics Toolkit
+
+A complete toolkit for measuring and improving software delivery performance using the 4 DORA metrics — Deployment Frequency, Lead Time for Changes, Change Failure Rate, and Mean Time to Restore.
+
+### The 4 metrics
+
+| Metric | What it measures | DORA Elite benchmark |
+| - | - | - |
+| Deployment Frequency | How often code reaches production | Multiple deploys/day |
+| Lead Time for Changes | Time from first commit to production | < 1 hour |
+| Change Failure Rate | % of deploys that cause incidents | 0–15% |
+| MTTR | Time to restore after a failure | < 1 hour |
+
+### Scripts
+
+| Script | Metric | Description |
+| - | - | - |
+| [dora_deployment_frequency.py](scripts/dora/dora_deployment_frequency.py) | Metric 1 | Count production deployments per day/week and classify Elite/High/Medium/Low |
+| [dora_lead_time.py](scripts/dora/dora_lead_time.py) | Metric 2 | Average time from first commit to production deployment |
+| [dora_change_failure_rate.py](scripts/dora/dora_change_failure_rate.py) | Metric 3 | % of deployments that triggered a production incident within 24h |
+| [dora_mttr.py](scripts/dora/dora_mttr.py) | Metric 4 | Average time to close production incidents |
+| [dora_report.py](scripts/dora/dora_report.py) | All | Unified report — JSON or Markdown — with overall DORA level |
+
+```bash
+# Install dependencies
+pip install -r scripts/requirements.txt
+
+# Full DORA report (JSON)
+python scripts/dora/dora_report.py \
+  --org https://dev.azure.com/myorg \
+  --project MyProject \
+  --pat <TOKEN> \
+  --from-date 2024-01-01 \
+  --to-date 2024-12-31
+
+# Full DORA report (Markdown)
+python scripts/dora/dora_report.py \
+  --org https://dev.azure.com/myorg \
+  --project MyProject \
+  --pat <TOKEN> \
+  --from-date 2024-01-01 \
+  --to-date 2024-12-31 \
+  --format markdown
+
+# Individual metric
+python scripts/dora/dora_deployment_frequency.py \
+  --org https://dev.azure.com/myorg \
+  --project MyProject \
+  --pat <TOKEN> \
+  --prod-keyword production
+```
+
+### Guides
+
+- [Dashboard Setup](docs/dora/dashboard-setup.md) — configure Azure DevOps native widgets for DORA visualization
+- [Collection Guide](docs/dora/collection-guide.md) — prerequisite setup for pipelines, tags, and branch policies (start here with a new team)
+
+### Agent
+
+| Agent | Description |
+| - | - |
+| [mfse-20-dora-analyst](agents/mfse-20-dora-analyst.agent.md) | On-demand DORA analysis via Azure DevOps MCP — natural language queries, benchmarking, recommendations |
+
+---
+
 ## Scripts & Azure DevOps Integrations
 
 Standalone scripts to monitor team performance and support continuous improvement of software delivery.

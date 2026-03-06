@@ -60,6 +60,11 @@
       "description": "End-to-end orchestrator: from raw idea through requirements, architecture, implementation, and review"
     },
     {
+      "name": "mfse-20-dora-analyst",
+      "source": "./agents/mfse-20-dora-analyst.agent.md",
+      "description": "DORA metrics analyst — on-demand analysis of Deployment Frequency, Lead Time, Change Failure Rate, and MTTR via Azure DevOps MCP"
+    },
+    {
       "name": "mfse-user-stories-writing",
       "source": "./skills/mfse-user-stories-writing",
       "description": "Create effective User Stories with BDD acceptance criteria (Given/When/Then)"
