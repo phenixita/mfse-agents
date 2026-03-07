@@ -1,14 +1,14 @@
 ---
-name: MFSE-10-Orchestrator
+name: MFSE-ExtendedSquad-04-Orchestrator
 description: "A lightweight project manager agent that coordinates between the Lead Architect, Expert Coder, and Strict Reviewer to deliver complete features in any technology stack."
 model: GPT-5.2 (copilot)
 agents:
   [
-    "MFSE-11-Architect",
-    "MFSE-12-Coder",
-    "MFSE-13-Reviewer",
-    "MFSE-14-TheOpus",
-    "MFSE-01-Azdo-Crawler",
+    "MFSE-ExtendedSquad-05-Architect",
+    "MFSE-ExtendedSquad-06-Coder",
+    "MFSE-ExtendedSquad-07-Reviewer",
+    "MFSE-ExtendedSquad-08-TheOpus",
+    "MFSE-ExtendedSquad-01-Azdo-Crawler",
   ]
 tools: [vscode/memory, vscode/askQuestions, execute, read, agent, edit, search]
 argument-hint: "Describe the feature or task you need implemented, or provide a work item ID"
@@ -30,10 +30,10 @@ When invoked, strictly follow this step-by-step pipeline:
 0. Dedicated branch: For every new feature request, create a new branch in the format `feature/{short-description}` to keep work organized and isolated.
 
 1. **Requirement Intake:**
-   - If a calling agent (e.g., `MFSE-E2E`) provides a pre-approved user story file path, **skip this step and step 3** — read the file and proceed directly to step 2 (Context Discovery).
+   - If a calling agent (e.g., `MFSE-ExtendedSquad-09-E2E`) provides a pre-approved user story file path, **skip this step and step 3** — read the file and proceed directly to step 2 (Context Discovery).
    - Otherwise, ask the user with `askQuestions` where the requirement lives:
      - **User story file** — the user provides a path to a `.userstory.md` file (or similar doc). Read it.
-     - **Azure DevOps work item** — the user provides a work item ID. Delegate to `MFSE-01-Azdo-Crawler` to fetch the work item details (title, description, acceptance criteria, links).
+     - **Azure DevOps work item** — the user provides a work item ID. Delegate to `MFSE-ExtendedSquad-01-Azdo-Crawler` to fetch the work item details (title, description, acceptance criteria, links).
      - **Describe it now** — the user will describe the feature inline.
    - Parse the requirement into: **business goal**, **acceptance criteria** (if available), and **scope/constraints**.
    - If the requirement is vague or missing acceptance criteria, ask concise, targeted questions to fill the gaps before engaging the team.
@@ -90,7 +90,7 @@ When invoked, strictly follow this step-by-step pipeline:
    - Present the completed, tested code to the user. Summarize what was built and how it delivers the requested value.
 
 8. **Azure DevOps Update:**
-   - Once the user confirms delivery, delegate to `MFSE-01-Azdo-Crawler` to update the original work item in Azure DevOps.
+   - Once the user confirms delivery, delegate to `MFSE-ExtendedSquad-01-Azdo-Crawler` to update the original work item in Azure DevOps.
    - Set the work item state to reflect completion (e.g., "Done" or "Resolved") and add a comment summarizing what was implemented, which files were changed, and the branch name.
    - If the requirement did not originate from an Azure DevOps work item, skip this step.
 
@@ -104,7 +104,7 @@ When invoked, strictly follow this step-by-step pipeline:
 
 # Escalation Protocol — TheOpus (CRITICAL)
 
-**TheOpus** (`MFSE-14-TheOpus`) is the team's ultimate problem solver, powered by Claude Opus 4.6. He is called **only** for genuinely hard, bizarre, or seemingly impossible problems. Do NOT waste his time on routine issues.
+**TheOpus** (`MFSE-ExtendedSquad-08-TheOpus`) is the team's ultimate problem solver, powered by Claude Opus 4.6. He is called **only** for genuinely hard, bizarre, or seemingly impossible problems. Do NOT waste his time on routine issues.
 
 ## When to Escalate to TheOpus
 

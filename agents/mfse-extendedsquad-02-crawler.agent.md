@@ -1,5 +1,5 @@
 ---
-name: MFSE-01-Crawler
+name: MFSE-ExtendedSquad-02-Crawler
 description: A fast 
 argument-hint: Let's research how this thing is done here
 model: Gemini 3 Flash (Preview) (copilot)

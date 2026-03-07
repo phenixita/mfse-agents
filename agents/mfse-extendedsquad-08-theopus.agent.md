@@ -1,5 +1,5 @@
 ---
-name: MFSE-14-TheOpus
+name: MFSE-ExtendedSquad-08-TheOpus
 description: "The ultimate problem solver. Called only when other agents are stuck on exceptionally difficult, bizarre, or seemingly impossible problems. TheOpus analyzes root causes, untangles complex issues, and delivers definitive solutions."
 model: Claude Opus 4.6 (copilot)
 tools: [vscode/memory, execute, read, agent, edit, search, web, context7/*, todo]

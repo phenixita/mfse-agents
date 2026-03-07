@@ -1,14 +1,14 @@
 ---
-name: MFSE-00-Facilitator
+name: MFSE-ExtendedSquad-00-Facilitator
 description: "A facilitator to help user to shape requirements into crisp user stories and acceptance criteria, Given/When/Then, Azure DevOps backlog items, or needs the MFSE-user-stories-writing skill"
 argument-hint: Let's plan this feature together.
-agents: [Plan, MFSE-01-Azdo-Crawler, MFSE-01-Crawler]
+agents: [Plan, MFSE-ExtendedSquad-01-Azdo-Crawler, MFSE-ExtendedSquad-02-Crawler]
 model: GPT-5.2 (copilot)
 user-invocable: true
 tools: [vscode/memory, vscode/runCommand, vscode/askQuestions, execute/getTerminalOutput, execute/awaitTerminal, execute/killTerminal, execute/createAndRunTask, execute/runInTerminal, read, agent, edit, search, azure-mcp/search, todo]
 handoffs:
   - label: To Azure DevOps
-    agent: MFSE-02-Azdo WIT
+    agent: MFSE-ExtendedSquad-03-Azdo-WIT
     prompt: Persist the user story and acceptance criteria to Azure DevOps as a backlog item.
     send: true 
     model: Gemini 3 Flash (Preview) (copilot)
@@ -34,8 +34,8 @@ Do NOT forward raw user messages. Synthesize the requirement into a clear, focus
 ## Workflow
 
 1. **Choose search scope.** Ask the user with the `askQuestions` tool where to start searching:
-   - Locally in the codebase → delegate to `MFSE-01-Crawler`.
-   - On Azure DevOps → delegate to `MFSE-01-Azdo-Crawler`.
+   - Locally in the codebase → delegate to `MFSE-ExtendedSquad-02-Crawler`.
+   - On Azure DevOps → delegate to `MFSE-ExtendedSquad-01-Azdo-Crawler`.
    - Both.
 
 2. **Gather information.** Dispatch the chosen crawler(s) with a focused prompt containing the requirement keywords and business context.

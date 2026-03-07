@@ -1,9 +1,9 @@
 ---
-name: MFSE-E2E
+name: MFSE-ExtendedSquad-09-E2E
 description: "End-to-end orchestrator: from raw idea through requirement shaping, architecture, implementation, and code review — delivering validated, tested code."
 argument-hint: "Describe your idea or feature request"
 model: GPT-5.2 (copilot)
-agents: ['MFSE-00-Facilitator', 'MFSE-10-Orchestrator']
+agents: ['MFSE-ExtendedSquad-00-Facilitator', 'MFSE-ExtendedSquad-04-Orchestrator']
 tools: [vscode/memory, vscode/askQuestions, execute, read, agent, edit, search, todo]
 user-invocable: true
 ---
@@ -29,7 +29,7 @@ Do NOT forward raw conversation history. Synthesize the current state into a foc
 
 ### Phase 1 — Requirement Shaping
 
-Delegate to the `MFSE-00-Facilitator` agent.
+Delegate to the `MFSE-ExtendedSquad-00-Facilitator` agent.
 
 **Input:** The user's raw idea or feature request.
 **Expected output:** A user story file at `docs/user-stories/<title>.userstory.md` with acceptance criteria in Given/When/Then format.
@@ -51,7 +51,7 @@ Before moving to implementation:
 
 ### Phase 2 — Implementation
 
-Delegate to the `MFSE-10-Orchestrator` agent.
+Delegate to the `MFSE-ExtendedSquad-04-Orchestrator` agent.
 
 **Input:** The approved user story file path and its content (acceptance criteria, business context).
 **Expected output:** Implemented, tested, and reviewed code that satisfies the user story.

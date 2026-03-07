@@ -6,30 +6,30 @@ The goal is to help teams move faster and deliver better software by combining A
 
 ## Agents
 
-### Pipeline (MFSE-0x) — Requirements & Context
+### Pipeline (MFSE-ExtendedSquad-0x) — Requirements & Context
 
 | Agent | Description |
 | - | - |
-| [mfse-00-facilitator](agents/mfse-00-facilitator/mfse-00-facilitator.agent.md) | Shapes raw ideas into user stories and acceptance criteria |
-| [mfse-01-crawler](agents/mfse-01-crawler/mfse-01-crawler.agent.md) | Fast codebase crawler for gathering context |
-| [mfse-01-crawler-azdo](agents/mfse-01-crawler-azdo/mfse-01-crawler-azdo.agent.md) | Azure DevOps crawler for work items and wiki |
-| [mfse-02-azdo-wit](agents/mfse-02-azdo-wit/mfse-02-azdo-wit.agent.md) | Azure DevOps Boards work item management |
+| [mfse-extendedsquad-00-facilitator](agents/mfse-extendedsquad-00-facilitator.agent.md) | Shapes raw ideas into user stories and acceptance criteria |
+| [mfse-extendedsquad-02-crawler](agents/mfse-extendedsquad-02-crawler.agent.md) | Fast codebase crawler for gathering context |
+| [mfse-extendedsquad-01-crawler-azdo](agents/mfse-extendedsquad-01-crawler-azdo.agent.md) | Azure DevOps crawler for work items and wiki |
+| [mfse-extendedsquad-03-azdo-wit](agents/mfse-extendedsquad-03-azdo-wit.agent.md) | Azure DevOps Boards work item management |
 
-### Implementation Team (MFSE-1x) — Design, Build, Review
+### Implementation Team (MFSE-ExtendedSquad-0x) — Design, Build, Review
 
 | Agent | Description |
 | - | - |
-| [mfse-10-orchestrator](agents/mfse-10-orchestrator/mfse-10-orchestrator.agent.md) | Coordinates the implementation team through the workflow |
-| [mfse-11-architect](agents/mfse-11-architect/mfse-11-architect.agent.md) | Designs system blueprints, contracts, and boundaries |
-| [mfse-12-coder](agents/mfse-12-coder/mfse-12-coder.agent.md) | Implements blueprints following TDD or user-chosen approach |
-| [mfse-13-reviewer](agents/mfse-13-reviewer/mfse-13-reviewer.agent.md) | Audits code against blueprints and conventions |
-| [mfse-14-theopus](agents/mfse-14-theopus/mfse-14-theopus.agent.md) | Escalation agent for genuinely hard problems |
+| [mfse-extendedsquad-04-orchestrator](agents/mfse-extendedsquad-04-orchestrator.agent.md) | Coordinates the implementation team through the workflow |
+| [mfse-extendedsquad-05-architect](agents/mfse-extendedsquad-05-architect.agent.md) | Designs system blueprints, contracts, and boundaries |
+| [mfse-extendedsquad-06-coder](agents/mfse-extendedsquad-06-coder.agent.md) | Implements blueprints following TDD or user-chosen approach |
+| [mfse-extendedsquad-07-reviewer](agents/mfse-extendedsquad-07-reviewer.agent.md) | Audits code against blueprints and conventions |
+| [mfse-extendedsquad-08-theopus](agents/mfse-extendedsquad-08-theopus.agent.md) | Escalation agent for genuinely hard problems |
 
 ### End-to-End
 
 | Agent | Description |
 | - | - |
-| [mfse-e2e](agents/mfse-e2e/mfse-e2e.agent.md) | Full pipeline: idea to user story to architecture to code to review |
+| [mfse-extendedsquad-09-e2e](agents/mfse-extendedsquad-09-e2e.agent.md) | Full pipeline: idea to user story to architecture to code to review |
 
 ### Skills
 
@@ -73,7 +73,7 @@ The agents follow a structured pipeline that mirrors a real engineering team:
 6. **Reviewer** audits the result against the blueprint and team conventions
 7. **TheOpus** is called in when the team hits a genuinely hard or unusual problem
 
-The **mfse-e2e** agent chains the full pipeline into a single invocation.
+The **mfse-extendedsquad-09-e2e** agent chains the full pipeline into a single invocation.
 
 ## Installing
 
@@ -84,7 +84,7 @@ copilot plugin install phenixita/mfse-swengineering
 ## Project Structure
 
 ```
-agents/          — one folder per agent, each with a <name>.agent.md prompt
+agents/          — agent prompt files (<name>.agent.md)
 skills/          — reusable prompt modules referenced by agents
 scripts/         — standalone scripts for Azure DevOps monitoring and tooling
 .claude-plugin/  — plugin manifest for distribution
@@ -92,7 +92,7 @@ scripts/         — standalone scripts for Azure DevOps monitoring and tooling
 
 ## Contributing
 
-1. Create or edit a folder under `agents/<agent-name>/`
+1. Create or edit a file under `agents/`
 2. Add/update the `<agent-name>.agent.md` file
 3. Register the agent in `.claude-plugin/marketplace.json`
 4. Update the agents table in this README

@@ -1,5 +1,5 @@
 ---
-name: MFSE-01-Azdo-Crawler
+name: MFSE-ExtendedSquad-01-Azdo-Crawler
 description: A specialized agent for searching Azure DevOps work items and wiki pages to identify if a requirement or topic has already been discussed.
 tools: [vscode/memory, microsoft/azure-devops-mcp/core_get_identity_ids, microsoft/azure-devops-mcp/core_list_project_teams, microsoft/azure-devops-mcp/core_list_projects, microsoft/azure-devops-mcp/search_wiki, microsoft/azure-devops-mcp/search_workitem, microsoft/azure-devops-mcp/wiki_get_page, microsoft/azure-devops-mcp/wiki_get_page_content, microsoft/azure-devops-mcp/wiki_get_wiki, microsoft/azure-devops-mcp/wiki_list_pages, microsoft/azure-devops-mcp/wiki_list_wikis, microsoft/azure-devops-mcp/wit_get_query, microsoft/azure-devops-mcp/wit_get_query_results_by_id, microsoft/azure-devops-mcp/wit_get_work_item, microsoft/azure-devops-mcp/wit_get_work_item_type, microsoft/azure-devops-mcp/wit_get_work_items_batch_by_ids, microsoft/azure-devops-mcp/wit_list_work_item_comments, microsoft/azure-devops-mcp/wit_my_work_items]
 model: Gemini 3 Flash (Preview) (copilot)

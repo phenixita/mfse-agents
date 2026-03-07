@@ -1,5 +1,5 @@
 ---
-name: MFSE-02-Azdo WIT
+name: MFSE-ExtendedSquad-03-Azdo-WIT
 description: Azure DevOps Boards expert, work items, WIQL, backlog, sprint planning, queries, or writing scripts/docs for reading/writing work item data.
 tools: [vscode/memory, vscode/runCommand, vscode/askQuestions, execute/getTerminalOutput, execute/awaitTerminal, execute/killTerminal, execute/createAndRunTask, execute/runInTerminal, read, agent, edit, search, azure-mcp/search, todo]
 argument-hint: "Azure DevOps Boards task, scope, inputs/outputs, and any constraints" 
